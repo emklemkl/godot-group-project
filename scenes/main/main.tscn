@@ -1,23 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsl25fihdefh6"]
 
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_862hj"]
 [ext_resource type="PackedScene" uid="uid://bp7hpikhe0nyk" path="res://scenes/world/world_ground_basic.tscn" id="1_wjv1b"]
-[ext_resource type="PackedScene" uid="uid://dxa7h086v2gg5" path="res://scenes/world/interactables/door.tscn" id="2_2ec0l"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_il3eq"]
+[ext_resource type="PackedScene" uid="uid://bpte2s34vtatq" path="res://scenes/player/player.tscn" id="2_cv705"]
 
 [node name="main" type="Node3D"]
+script = ExtResource("1_862hj")
 
 [node name="Node3D" parent="." instance=ExtResource("1_wjv1b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0738661, -1.19209e-07, -0.0509605)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0867, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-shape = SubResource("CapsuleShape3D_il3eq")
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515507, 0)
-
-[node name="door" parent="." instance=ExtResource("2_2ec0l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00563145, 0.513389, 2.57912)
+[node name="Player" parent="." instance=ExtResource("2_cv705")]
