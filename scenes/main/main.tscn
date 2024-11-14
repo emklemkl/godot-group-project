@@ -1,3 +1,4 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsl25fihdefh6"]
 [gd_scene load_steps=7 format=3 uid="uid://dsl25fihdefh6"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_862hj"]
@@ -7,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bsmnu3m0jea3x" path="res://scenes/creatures/troll.tscn" id="5_7fpri"]
 [ext_resource type="Script" path="res://scenes/creatures/troll.gd" id="5_e2wsn"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_pok58"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lixkc"]
+
 [node name="main" type="Node3D"]
 script = ExtResource("1_862hj")
 
@@ -14,8 +19,14 @@ script = ExtResource("1_862hj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0738661, -1.19209e-07, -0.0509605)
 
 [node name="Player" parent="." instance=ExtResource("2_cv705")]
-script = ExtResource("4_0uwti")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61124, 1.0867, 0)
 
-[node name="Troll" parent="." instance=ExtResource("5_7fpri")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14427, -6.91311)
-script = ExtResource("5_e2wsn")
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+mesh = SubResource("BoxMesh_pok58")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_lixkc")

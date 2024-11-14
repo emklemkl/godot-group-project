@@ -1,8 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpte2s34vtatq"]
+[gd_scene load_steps=4 format=3 uid="uid://bpte2s34vtatq"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_r6s6c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_il3eq"]
+radius = 0.2
+height = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e643i"]
+size = Vector3(0.32, 0.26, 1.22)
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0867, 0)
@@ -13,3 +18,11 @@ shape = SubResource("CapsuleShape3D_il3eq")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515507, 0)
+
+[node name="Area3D-arm" type="Area3D" parent="Camera3D"]
+
+[node name="arm" type="CollisionShape3D" parent="Camera3D/Area3D-arm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.610693)
+shape = SubResource("BoxShape3D_e643i")
+
+[connection signal="body_entered" from="Camera3D/Area3D-arm" to="." method="_on_area_3_darm_body_entered"]

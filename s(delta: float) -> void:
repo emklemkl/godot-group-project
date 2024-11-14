@@ -1,0 +1,56 @@
+[1mdiff --git a/ost.jpg.import b/ost.jpg.import[m
+[1mdeleted file mode 100644[m
+[1mindex ca35e57..0000000[m
+[1m--- a/ost.jpg.import[m
+[1m+++ /dev/null[m
+[36m@@ -1,34 +0,0 @@[m
+[31m-[remap][m
+[31m-[m
+[31m-importer="texture"[m
+[31m-type="CompressedTexture2D"[m
+[31m-uid="uid://bcsld015f1knu"[m
+[31m-path="res://.godot/imported/ost.jpg-8ebcd4433d12a0cfc2c9a3a556c75498.ctex"[m
+[31m-metadata={[m
+[31m-"vram_texture": false[m
+[31m-}[m
+[31m-[m
+[31m-[deps][m
+[31m-[m
+[31m-source_file="res://ost.jpg"[m
+[31m-dest_files=["res://.godot/imported/ost.jpg-8ebcd4433d12a0cfc2c9a3a556c75498.ctex"][m
+[31m-[m
+[31m-[params][m
+[31m-[m
+[31m-compress/mode=0[m
+[31m-compress/high_quality=false[m
+[31m-compress/lossy_quality=0.7[m
+[31m-compress/hdr_compression=1[m
+[31m-compress/normal_map=0[m
+[31m-compress/channel_pack=0[m
+[31m-mipmaps/generate=false[m
+[31m-mipmaps/limit=-1[m
+[31m-roughness/mode=0[m
+[31m-roughness/src_normal=""[m
+[31m-process/fix_alpha_border=true[m
+[31m-process/premult_alpha=false[m
+[31m-process/normal_map_invert_y=false[m
+[31m-process/hdr_as_srgb=false[m
+[31m-process/hdr_clamp_exposure=false[m
+[31m-process/size_limit=0[m
+[31m-detect_3d/compress_to=1[m
+[1mdiff --git a/scenes/main/main.gd b/scenes/main/main.gd[m
+[1mindex 79b8ff9..0255870 100644[m
+[1m--- a/scenes/main/main.gd[m
+[1m+++ b/scenes/main/main.gd[m
+[36m@@ -4,6 +4,8 @@[m [mextends Node3D[m
+ func _ready() -> void:[m
+ 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED[m
+ [m
+[31m-# Called every frame. 'delta' is the elapsed time since the previous frame.[m
+[31m-func _process(delta: float) -> void:[m
+[31m-	pass[m
+[32m+[m[32mfunc _input(event):[m
+[32m+[m	[32mif event.is_action_pressed("ui_cancel"):[m
+[32m+[m		[32mInput.mouse_mode = Input.MOUSE_MODE_VISIBLE[m
+[32m+[m	[32mif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:[m
+[32m+[m		[32mInput.mouse_mode = Input.MOUSE_MODE_CAPTURED[m
