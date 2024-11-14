@@ -6,9 +6,9 @@ var speed = 5
 var jump_speed = 3.5
 var mouse_sensitivity = 0.002
 
-var item_to_pick_up
+var object_to_interact_with
 func ready():
-	reset_item_to_pick_up()
+	reset_object_to_interact_with()
 	
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -29,19 +29,19 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = jump_speed
 	if Input.is_action_just_pressed("use"):
-			if item_to_pick_up.has_method("interact"):
-				item_to_pick_up.interact()
+			if object_to_interact_with.has_method("interact"):
+				object_to_interact_with.interact()
 
 func interact():
 	print("Nothing to pick up")
 
 func _on_area_3_darm_body_entered(body: Node3D) -> void:
-	item_to_pick_up = body
+	object_to_interact_with = body
 
 
 func _on_area_3_darm_body_exited(body: Node3D) -> void:
-	reset_item_to_pick_up()
+	reset_object_to_interact_with()
 
 
-func reset_item_to_pick_up():
-	item_to_pick_up = get_node(".")
+func reset_object_to_interact_with():
+	object_to_interact_with = get_node(".")
