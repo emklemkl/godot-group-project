@@ -1,20 +1,21 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
 
-func get_pos():
+func get_pos() -> Vector3:
 	var player = get_parent().get_node("Player")
 	if player:
-		print(player.global_transform.origin.y)
-	else:
-		print("Player node not found")
+		return player.global_transform.origin
+	var pos:Vector3
+	return pos
 
 func _physics_process(delta: float) -> void:
-
-	velocity.x = move_toward(velocity.x, 0, SPEED)
-	velocity.z = move_toward(velocity.z, 0.999929, SPEED)
-	get_pos()
+	var player_cur_pos = get_pos()
+	var troll_cur_pos = self.global_transform.origin
+	var direction = (player_cur_pos - troll_cur_pos).normalized()
+	velocity.x = direction.x * SPEED
+	velocity.z = direction.z * SPEED
 	move_and_slide()
