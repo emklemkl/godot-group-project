@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtjkqa4ef8cw7"
-path.s3tc="res://.godot/imported/Skooks_v2_Tiles_Skooks.png-f0df96c803cc551f5de7e144618b2fd7.s3tc.ctex"
+uid="uid://b8jj8l0fuil0c"
+path.s3tc="res://.godot/imported/Skooks_v2.18_Tiles_Skooks.png-0cbf9373993b38fb02630302c657b827.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://textures/Skooks_v2_Tiles_Skooks.png"
-dest_files=["res://.godot/imported/Skooks_v2_Tiles_Skooks.png-f0df96c803cc551f5de7e144618b2fd7.s3tc.ctex"]
+source_file="res://textures/Skooks_v2.18_Tiles_Skooks.png"
+dest_files=["res://.godot/imported/Skooks_v2.18_Tiles_Skooks.png-0cbf9373993b38fb02630302c657b827.s3tc.ctex"]
 
 [params]
 

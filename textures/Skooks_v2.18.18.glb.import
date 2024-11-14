@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c576qncay1452"
-path="res://.godot/imported/Skooks_v2.18.glb-bc3143938e01429c919d4ffff0ed1bdb.scn"
+uid="uid://7xe06v0vm2dj"
+path="res://.godot/imported/Skooks_v2.18.18.glb-ab15f443825d4077d7d12f46d7d60d7b.scn"
 
 [deps]
 
-source_file="res://textures/Skooks_v2.18.glb"
-dest_files=["res://.godot/imported/Skooks_v2.18.glb-bc3143938e01429c919d4ffff0ed1bdb.scn"]
+source_file="res://textures/Skooks_v2.18.18.glb"
+dest_files=["res://.godot/imported/Skooks_v2.18.18.glb-ab15f443825d4077d7d12f46d7d60d7b.scn"]
 
 [params]
 
