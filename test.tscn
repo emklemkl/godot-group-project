@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4lvge73s7qqc"]
+
+[ext_resource type="Script" path="res://script/test.gd" id="1_gejn2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wotap"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cddo8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h1dut"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_gejn2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_wotap")
+
+[node name="Timer" type="Timer" parent="MeshInstance3D"]
+one_shot = true
+autostart = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471814, 0)
+shape = SubResource("BoxShape3D_cddo8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.460347, 0)
+mesh = SubResource("BoxMesh_h1dut")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.965926, 0.0767032, -0.247192, 0, 0.955077, 0.296358, 0.258819, -0.28626, 0.922533, -1, 1.12432, 2.17811)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.90044, 0, 0.43498, 0, 1, 0, -0.43498, 0, 0.90044, 1.69402, 1.33836, 2.27278)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+
+[connection signal="timeout" from="MeshInstance3D/Timer" to="." method="_on_timer_timeout"]
