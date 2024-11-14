@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsl25fihdefh6"]
+
+[ext_resource type="PackedScene" uid="uid://bp7hpikhe0nyk" path="res://scenes/world/world_ground_basic.tscn" id="1_wjv1b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_il3eq"]
+
+[node name="main" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_wjv1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0738661, -1.19209e-07, -0.0509605)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0867, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_il3eq")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515507, 0)

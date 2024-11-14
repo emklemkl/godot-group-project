@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp7hpikhe0nyk"]
+
+[ext_resource type="Texture2D" uid="uid://mjnf2aeicv0p" path="res://textures/world_ground_fult.png" id="1_p1wsh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvgwc"]
+albedo_texture = ExtResource("1_p1wsh")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xagr1"]
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s12v6"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[node name="world_ground_basic" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_wvgwc")
+mesh = SubResource("PlaneMesh_xagr1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_s12v6")

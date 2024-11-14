@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4lvge73s7qqc"]
 
-[ext_resource type="Script" path="res://script/test.gd" id="1_gejn2"]
+[ext_resource type="Script" path="res://script/test.gd" id="1_v56pu"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wotap"]
 
@@ -9,7 +9,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_h1dut"]
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_gejn2")
+script = ExtResource("1_v56pu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_wotap")
