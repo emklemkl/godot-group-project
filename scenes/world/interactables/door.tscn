@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxa7h086v2gg5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lufuu"]
+size = Vector3(0.1, 1, 0.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_js4gf"]
+size = Vector3(0.1, 1, 0.9)
+
+[node name="door" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.501591, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 2.37507e-06, 0.000190985, -2.2034e-06, 1, -0.000887246, -0.000190987, 0.000887245, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_lufuu")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_js4gf")
