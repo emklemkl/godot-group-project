@@ -14,3 +14,6 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	pass # Replace with function body
+
+func soome_func() -> void:
+	pass
