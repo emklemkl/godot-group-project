@@ -26,3 +26,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.610693)
 shape = SubResource("BoxShape3D_e643i")
 
 [connection signal="body_entered" from="Camera3D/Area3D-arm" to="." method="_on_area_3_darm_body_entered"]
+[connection signal="body_exited" from="Camera3D/Area3D-arm" to="." method="_on_area_3_darm_body_exited"]
