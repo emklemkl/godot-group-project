@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bsmnu3m0jea3x" path="res://scenes/creatures/troll.tscn" id="5_7fpri"]
 [ext_resource type="Script" path="res://scenes/creatures/troll.gd" id="5_e2wsn"]
 [ext_resource type="Script" path="res://scenes/main/basic_item_SB.gd" id="5_ppb82"]
-[ext_resource type="MeshLibrary" uid="uid://sj4aif5wmlln" path="res://textures/dungeon-tiles.tres" id="7_ngs5f"]
-[ext_resource type="PackedScene" uid="uid://b03e16q4cf6fj" path="res://models/ironbarswithlock2.glb" id="8_46tah"]
+[ext_resource type="MeshLibrary" uid="uid://bin5jigjv73g3" path="res://textures/dungeon-tiles.tres" id="7_ngs5f"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pok58"]
 
