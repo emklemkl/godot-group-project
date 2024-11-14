@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bxuf42ydk082k"
-path="res://.godot/imported/Skooks Tiles.glb-9cdb10f8e0c995c83d4f7d836003b0ae.scn"
+uid="uid://c576qncay1452"
+path="res://.godot/imported/Skooks_v2.18.glb-bc3143938e01429c919d4ffff0ed1bdb.scn"
 
 [deps]
 
-source_file="res://textures/Skooks Tiles.glb"
-dest_files=["res://.godot/imported/Skooks Tiles.glb-9cdb10f8e0c995c83d4f7d836003b0ae.scn"]
+source_file="res://textures/Skooks_v2.18.glb"
+dest_files=["res://.godot/imported/Skooks_v2.18.glb-bc3143938e01429c919d4ffff0ed1bdb.scn"]
 
 [params]
 

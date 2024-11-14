@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mjnf2aeicv0p"
-path.s3tc="res://.godot/imported/world_ground_fult.png-b3dd0a32a10565dd5c11fcea9e4c2962.s3tc.ctex"
+uid="uid://v340lef4fxq0"
+path.s3tc="res://.godot/imported/barswall3_pngtree-prison-bars-vector-png-image_6633246.png-7cebdca09e70c5a8604dfafb68eec25e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "f7ab9a2f027f61ee0691e9d37811200f"
+}
 
 [deps]
 
-source_file="res://textures/world_ground_fult.png"
-dest_files=["res://.godot/imported/world_ground_fult.png-b3dd0a32a10565dd5c11fcea9e4c2962.s3tc.ctex"]
+source_file="res://barswall3_pngtree-prison-bars-vector-png-image_6633246.png"
+dest_files=["res://.godot/imported/barswall3_pngtree-prison-bars-vector-png-image_6633246.png-7cebdca09e70c5a8604dfafb68eec25e.s3tc.ctex"]
 
 [params]
 
