@@ -34,3 +34,6 @@ func interact():
 
 func _on_area_3_darm_body_entered(body: Node3D) -> void:
 	print(body)
+	if Input.is_action_just_pressed("interact"):
+		if body.has_method("interact"):
+			body.interact()
