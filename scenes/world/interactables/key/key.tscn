@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3wrjq8v0yl0t"]
+
+[ext_resource type="PackedScene" uid="uid://denranknifnpw" path="res://scenes/world/interactables/key/goldkey2.glb" id="1_0xwv2"]
+[ext_resource type="Script" path="res://scenes/world/interactables/key/key.gd" id="1_ri1gp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oinyt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2wtjw"]
+size = Vector3(1.92871, 0.439453, 1.4657)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_oinyt")
+linear_velocity = Vector3(0, 0.2, 0)
+script = ExtResource("1_ri1gp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0.00322266, 0.0155396, 0.000927737)
+shape = SubResource("BoxShape3D_2wtjw")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00101563)
+
+[node name="goldkey2" parent="." instance=ExtResource("1_0xwv2")]

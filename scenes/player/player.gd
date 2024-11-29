@@ -5,8 +5,9 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed = 5
 var jump_speed = 3.5
 var mouse_sensitivity = 0.002
-
 var object_to_interact_with
+var backpack = []
+
 func ready():
 	reset_object_to_interact_with()
 	
@@ -27,6 +28,7 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = jump_speed
 	if Input.is_action_just_pressed("use"):
+			set_backpack()
 			if object_to_interact_with.has_method("interact"):
 				object_to_interact_with.interact()
 	if Input.is_action_just_pressed("crouch"):
@@ -36,6 +38,12 @@ func _physics_process(delta):
 
 func interact():
 	print("Nothing to pick up")
+
+func set_backpack() -> void:
+	if object_to_interact_with.has_method("get_item_name"):
+		backpack.append(object_to_interact_with.get_item_name())
+		print("Backpack: " + str(backpack))
+	
 
 func _on_area_3_darm_body_entered(body: Node3D) -> void:
 	if body.has_method("interact") && body != $".":
