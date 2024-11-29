@@ -29,6 +29,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("use"):
 			if object_to_interact_with.has_method("interact"):
 				object_to_interact_with.interact()
+	if Input.is_action_just_pressed("crouch"):
+		crouch_down()
+	if Input.is_action_just_released("crouch"):
+		crouch_up()
 
 func interact():
 	print("Nothing to pick up")
@@ -43,3 +47,12 @@ func _on_area_3_darm_body_exited(body: Node3D) -> void:
 
 func reset_object_to_interact_with():
 	object_to_interact_with = get_node(".")
+
+func crouch_down():
+	speed = 3
+	$Camera3D.position.y = 0.216
+	$CollisionShape3D.get_shape().set_height(0.5)
+func crouch_up():
+	speed = 5
+	$Camera3D.position.y = 0.516
+	$CollisionShape3D.get_shape().set_height(1)

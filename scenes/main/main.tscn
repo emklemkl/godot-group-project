@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsl25fihdefh6"]
+[gd_scene load_steps=10 format=3 uid="uid://csnno7ly517ug"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_862hj"]
 [ext_resource type="PackedScene" uid="uid://bpte2s34vtatq" path="res://scenes/player/player.tscn" id="2_cv705"]
-[ext_resource type="Script" path="res://scenes/main/basic_item.gd" id="4_5k2k3"]
+[ext_resource type="Script" path="res://scenes/world/interactables/basic_item/basic_item.gd" id="4_5k2k3"]
 [ext_resource type="PackedScene" uid="uid://bsmnu3m0jea3x" path="res://scenes/creatures/troll.tscn" id="5_7fpri"]
 [ext_resource type="Script" path="res://scenes/creatures/troll.gd" id="5_e2wsn"]
-[ext_resource type="Script" path="res://scenes/main/basic_item_SB.gd" id="5_ppb82"]
-[ext_resource type="PackedScene" uid="uid://bi8ttdurk5myg" path="res://map1.tscn" id="7_pumvy"]
+[ext_resource type="Script" path="res://scenes/world/interactables/basic_item/basic_item_SB.gd" id="5_ppb82"]
+[ext_resource type="PackedScene" uid="uid://u1ihn02ms0vx" path="res://scenes/world/maps/map1.tscn" id="7_pumvy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pok58"]
 

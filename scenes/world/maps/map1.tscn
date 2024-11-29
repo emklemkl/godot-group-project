@@ -1,14 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://bi8ttdurk5myg"]
+[gd_scene load_steps=11 format=3 uid="uid://u1ihn02ms0vx"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0d2rac1c434v" path="res://textures/Skooksdiffus.tres" id="1_vf3lk"]
-[ext_resource type="MeshLibrary" uid="uid://bsfsyqpb2y8pq" path="res://textures/bars-tile.tres" id="2_1ccij"]
+[ext_resource type="MeshLibrary" uid="uid://ro2msw6svvrj" path="res://textures/Skooksdiffus.tres" id="1_vf3lk"]
+[ext_resource type="MeshLibrary" uid="uid://cg7ledlqys1o8" path="res://textures/bars-tile.tres" id="2_1ccij"]
 [ext_resource type="PackedScene" uid="uid://dis5weti5u4vt" path="res://models/Skull.glb" id="4_5j4pt"]
 [ext_resource type="PackedScene" uid="uid://cq4v27sghgn1l" path="res://models/desk.glb" id="6_bwahy"]
 [ext_resource type="PackedScene" uid="uid://xnr3bg1jdn8q" path="res://models/ironbarswithlock2.glb" id="7_pph3d"]
 [ext_resource type="PackedScene" uid="uid://5ockdjl7muki" path="res://models/bedwood.glb" id="8_fwb1p"]
 [ext_resource type="PackedScene" uid="uid://b6b6g8vvrutj3" path="res://models/Veg-1.glb" id="9_hip4x"]
 [ext_resource type="PackedScene" uid="uid://f8ai650e5qn" path="res://models/goldkey2.glb" id="10_tyd86"]
-[ext_resource type="MeshLibrary" uid="uid://b46pd146h47kq" path="res://textures/door-tile.tres" id="10_wyy4t"]
+[ext_resource type="MeshLibrary" uid="uid://dof7e23ljxnft" path="res://textures/door-tile.tres" id="10_wyy4t"]
 [ext_resource type="PackedScene" uid="uid://d2lyoamr83etw" path="res://models/Cumbucket4.glb" id="11_7548n"]
 
 [node name="Node3D" type="Node3D"]
