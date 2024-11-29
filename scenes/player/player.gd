@@ -17,18 +17,22 @@ func _input(event):
 		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
 		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))
 
-func _physics_process(delta):
+##
+func _calculate_velocity(delta):
 	velocity.y += -gravity * delta
 	var input = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
 	velocity.x = movement_dir.x * speed
 	velocity.z = movement_dir.z * speed
 	
+func _physics_process(delta):
+	_calculate_velocity(delta)
+	
 	move_and_slide()
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = jump_speed
 	if Input.is_action_just_pressed("use"):
-			set_backpack()
+			append_backpack()
 			if object_to_interact_with.has_method("interact"):
 				object_to_interact_with.interact()
 	if Input.is_action_just_pressed("crouch"):
@@ -39,7 +43,7 @@ func _physics_process(delta):
 func interact():
 	print("Nothing to pick up")
 
-func set_backpack() -> void:
+func append_backpack() -> void:
 	if object_to_interact_with.has_method("get_item_name"):
 		backpack.append(object_to_interact_with.get_item_name())
 		print("Backpack: " + str(backpack))
