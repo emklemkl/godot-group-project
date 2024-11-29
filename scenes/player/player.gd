@@ -8,8 +8,9 @@ var mouse_sensitivity = 0.002
 var object_to_interact_with
 var backpack = []
 
-func ready():
+func _ready():
 	reset_object_to_interact_with()
+	add_to_group("player")
 	
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -38,6 +39,9 @@ func _physics_process(delta):
 		crouch_down()
 	if Input.is_action_just_released("crouch"):
 		crouch_up()
+
+func is_item_in_backpack(item):
+	return backpack.has(item)
 
 func interact():
 	print("Nothing to pick up")

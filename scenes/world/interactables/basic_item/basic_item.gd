@@ -2,7 +2,7 @@ extends Node3D
 
 class_name BasicItem
 
-var item_name: String = "_"
+var item_name: String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

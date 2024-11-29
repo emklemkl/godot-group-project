@@ -1,4 +1,4 @@
-extends "res://scenes/world/interactables/basic_item/basic_item.gd"
+extends BasicItem
 
 class_name Key
 
