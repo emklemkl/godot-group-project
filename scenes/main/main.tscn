@@ -8,7 +8,6 @@
 [ext_resource type="Script" path="res://scenes/main/basic_item_SB.gd" id="5_ppb82"]
 [ext_resource type="PackedScene" uid="uid://bi8ttdurk5myg" path="res://map1.tscn" id="7_pumvy"]
 
-
 [sub_resource type="BoxMesh" id="BoxMesh_pok58"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lixkc"]
@@ -33,7 +32,7 @@ script = ExtResource("5_ppb82")
 shape = SubResource("BoxShape3D_lixkc")
 
 [node name="Troll" parent="." instance=ExtResource("5_7fpri")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.23107, 2.00737, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.23107, 2.00737, 3.06782)
 script = ExtResource("5_e2wsn")
 
 [node name="Node3D" parent="." instance=ExtResource("7_pumvy")]
