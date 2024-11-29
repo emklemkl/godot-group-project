@@ -15,8 +15,6 @@ func _input(event):
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
 		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))
-	if Input.is_action_just_pressed("interact"):
-		interact()
 
 func _physics_process(delta):
 	velocity.y += -gravity * delta

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ctm4ohneddyq0"
-path="res://.godot/imported/barswall3.glb-6e4bd9c18ffcb0e737e0adaf8f54bca5.scn"
+uid="uid://d2lyoamr83etw"
+path="res://.godot/imported/Cumbucket4.glb-43d7ed5cad9411357f1c23e97196ce64.scn"
 
 [deps]
 
-source_file="res://barswall3.glb"
-dest_files=["res://.godot/imported/barswall3.glb-6e4bd9c18ffcb0e737e0adaf8f54bca5.scn"]
+source_file="res://models/Cumbucket4.glb"
+dest_files=["res://.godot/imported/Cumbucket4.glb-43d7ed5cad9411357f1c23e97196ce64.scn"]
 
 [params]
 
