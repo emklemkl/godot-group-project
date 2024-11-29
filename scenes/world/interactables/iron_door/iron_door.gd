@@ -1,6 +1,7 @@
 extends Node3D
 
 var isOpen = false
+var isLocked = true
 var close_pos = Vector3()
 var open_pos = Vector3()
 # Called when the node enters the scene tree for the first time.
@@ -14,11 +15,18 @@ func _process(delta: float) -> void:
 	pass
 
 func interact():
-	if(isOpen):
-		set_rotation_degrees(Vector3(0, 0, 0))
-		set_global_position(close_pos)
-		isOpen = false
-	else:
-		set_rotation_degrees(Vector3(0, 90, 0))
-		set_global_position(open_pos)
-		isOpen = true
+	if (isLocked):
+		if(isOpen):
+			set_rotation_degrees(Vector3(0, 0, 0))
+			set_global_position(close_pos)
+			isOpen = false
+		else:
+			set_rotation_degrees(Vector3(0, 90, 0))
+			set_global_position(open_pos)
+			isOpen = true
+
+func getIsLocked():
+	return isLocked
+	
+func setIsLocker(locked: bool = false):
+	isLocked = locked
