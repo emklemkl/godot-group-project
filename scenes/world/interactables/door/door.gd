@@ -5,28 +5,22 @@ class_name Door
 var isOpen = false
 var is_unlocked = true
 var key_id = ""
-var close_pos = Vector3()
-var open_pos = Vector3()
+var move_degree = 0
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
-	close_pos = get_global_position()
-
-
-	open_pos = Vector3(close_pos.x + 0.395, close_pos.y, close_pos.z + 0.414)
-	print(close_pos)
-	print(open_pos)
-
-
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var rotation = get_rotation_degrees()
+	if(isOpen) && move_degree < 90:
+		set_rotation_degrees(Vector3(0,rotation.y+1,0))
+		move_degree+=1
+	if(!isOpen) && move_degree > 0:
+		set_rotation_degrees(Vector3(0,rotation.y-1,0))
+		move_degree-=1
 
 func interact():
-	print(close_pos)
-	print(open_pos)
-
-
 	var player = get_tree().get_nodes_in_group("player")
 
 	if (!is_unlocked && player[0].is_item_in_backpack(key_id)):
@@ -34,12 +28,8 @@ func interact():
 		
 	if (is_unlocked):
 		if(isOpen):
-			set_rotation_degrees(Vector3(0, 0, 0))
-			set_global_position(close_pos)
 			isOpen = false
 		else:
-			set_rotation_degrees(Vector3(0, 90, 0))
-			set_global_position(open_pos)
 			isOpen = true
 
 func get_is_unlocked():

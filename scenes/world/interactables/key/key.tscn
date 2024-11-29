@@ -12,6 +12,7 @@ size = Vector3(1.92871, 0.439453, 1.4657)
 physics_material_override = SubResource("PhysicsMaterial_oinyt")
 linear_velocity = Vector3(0, 0.2, 0)
 script = ExtResource("1_ri1gp")
+key_id = "dungeon_key"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0.00322266, 0.0155396, 0.000927737)
