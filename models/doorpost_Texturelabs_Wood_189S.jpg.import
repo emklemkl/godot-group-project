@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mjnf2aeicv0p"
-path.s3tc="res://.godot/imported/world_ground_fult.png-b3dd0a32a10565dd5c11fcea9e4c2962.s3tc.ctex"
+uid="uid://cjf0up1i1spo"
+path.s3tc="res://.godot/imported/doorpost_Texturelabs_Wood_189S.jpg-63ba9249309b3a7f3a6bba33686482f8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "0f0da44303d57b58b81aab986efa61fa"
+}
 
 [deps]
 
-source_file="res://textures/world_ground_fult.png"
-dest_files=["res://.godot/imported/world_ground_fult.png-b3dd0a32a10565dd5c11fcea9e4c2962.s3tc.ctex"]
+source_file="res://models/doorpost_Texturelabs_Wood_189S.jpg"
+dest_files=["res://.godot/imported/doorpost_Texturelabs_Wood_189S.jpg-63ba9249309b3a7f3a6bba33686482f8.s3tc.ctex"]
 
 [params]
 

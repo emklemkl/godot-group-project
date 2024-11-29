@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bxuf42ydk082k"
-path="res://.godot/imported/Skooks Tiles.glb-9cdb10f8e0c995c83d4f7d836003b0ae.scn"
+uid="uid://5ockdjl7muki"
+path="res://.godot/imported/bedwood.glb-e61258c10042af2331b73c323c4dfd8f.scn"
 
 [deps]
 
-source_file="res://textures/Skooks Tiles.glb"
-dest_files=["res://.godot/imported/Skooks Tiles.glb-9cdb10f8e0c995c83d4f7d836003b0ae.scn"]
+source_file="res://models/bedwood.glb"
+dest_files=["res://.godot/imported/bedwood.glb-e61258c10042af2331b73c323c4dfd8f.scn"]
 
 [params]
 
