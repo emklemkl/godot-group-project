@@ -10,5 +10,4 @@ func _process(delta: float) -> void:
 	pass
 
 func interact():
-	print(get_parent())
 	get_parent().interact()

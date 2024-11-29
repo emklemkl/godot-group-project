@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/main/basic_item_SB.gd" id="5_ppb82"]
 [ext_resource type="PackedScene" uid="uid://bi8ttdurk5myg" path="res://map1.tscn" id="7_pumvy"]
 
+
 [sub_resource type="BoxMesh" id="BoxMesh_pok58"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lixkc"]
