@@ -20,9 +20,9 @@ func interact():
 	print(open_pos)
 	if(isOpen):
 		set_rotation_degrees(Vector3(0, 0, 0))
-		set_position(close_pos)
+		set_global_position(close_pos)
 		isOpen = false
 	else:
 		set_rotation_degrees(Vector3(0, 90, 0))
-		set_position(open_pos)
+		set_global_position(open_pos)
 		isOpen = true
