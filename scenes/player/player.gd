@@ -38,7 +38,9 @@ func interact():
 	print("Nothing to pick up")
 
 func _on_area_3_darm_body_entered(body: Node3D) -> void:
-	object_to_interact_with = body
+	if body.has_method("interact") && body != $".":
+		show_ui_hand()
+		object_to_interact_with = body
 
 
 func _on_area_3_darm_body_exited(body: Node3D) -> void:
@@ -47,6 +49,7 @@ func _on_area_3_darm_body_exited(body: Node3D) -> void:
 
 func reset_object_to_interact_with():
 	object_to_interact_with = get_node(".")
+	hide_ui_hand()
 
 func crouch_down():
 	speed = 3
@@ -56,3 +59,9 @@ func crouch_up():
 	speed = 5
 	$Camera3D.position.y = 0.516
 	$CollisionShape3D.get_shape().set_height(1)
+
+func hide_ui_hand():
+	$Control/Hand.set_visible(false)
+	
+func show_ui_hand():
+	$Control/Hand.set_visible(true)
